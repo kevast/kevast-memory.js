@@ -11,11 +11,25 @@
     "kevast",
     "memory"
   ],
+  "scripts": {
+    "lint": "tslint -p tsconfig.json",
+    "build": "npm run build:nodejs && npm run build:browser",
+    "build:browser": "webpack",
+    "build:nodejs": "tsc",
+    "clean": "rm -rf ./dist/*",
+    "prepublishOnly": "npm run build"
+  },
   "repository": "git@github.com:kevast/kevast-memory.js.git",
   "author": "Andie <zchangan@163.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "kevast": "^0.0.2"
+    "@types/node": "^10.12.12",
+    "kevast": "^0.0.2",
+    "ts-loader": "^5.3.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }
