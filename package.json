@@ -13,11 +13,12 @@
   ],
   "scripts": {
     "lint": "tslint -p tsconfig.json",
+    "test": "mocha --require espower-typescript/guess \"test/**/*.ts\"",
     "build": "npm run build:nodejs && npm run build:browser",
     "build:browser": "webpack",
     "build:nodejs": "tsc",
     "clean": "rm -rf ./dist/*",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run test && npm run build"
   },
   "repository": "git@github.com:kevast/kevast-memory.js.git",
   "author": "Andie <zchangan@163.com>",
@@ -27,7 +28,7 @@
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.12",
     "espower-typescript": "^9.0.1",
-    "kevast": "^0.0.2",
+    "kevast": "^0.0.3",
     "mocha": "^5.2.0",
     "power-assert": "^1.6.1",
     "ts-loader": "^5.3.1",
