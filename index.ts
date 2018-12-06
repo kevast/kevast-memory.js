@@ -1,9 +1,8 @@
-import {SyncStorage} from 'kevast';
+import {ISyncStorage} from 'kevast/dist/nodejs/Storage'
 
-class MemoryStorage extends SyncStorage {
+export = class KevastMemory implements ISyncStorage {
   private map: Map<string, string>;
   public constructor() {
-    super();
     this.map = new Map();
   }
   public clear(): void {
