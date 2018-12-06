@@ -1,4 +1,4 @@
-import {ISyncStorage} from 'kevast/dist/nodejs/Storage'
+import {ISyncStorage} from 'kevast/dist/nodejs/Storage';
 
 export = class KevastMemory implements ISyncStorage {
   private map: Map<string, string>;
@@ -32,4 +32,4 @@ export = class KevastMemory implements ISyncStorage {
   public values(): IterableIterator<string> {
     return this.map.values();
   }
-}
+};
