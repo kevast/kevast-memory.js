@@ -1,0 +1,21 @@
+{
+  "name": "kevast-memory",
+  "version": "0.0.1",
+  "description": "Memory storage for kevast.js",
+  "main": "index.js",
+  "keywords": [
+    "key",
+    "value",
+    "key-value",
+    "storage",
+    "kevast",
+    "memory"
+  ],
+  "repository": "git@github.com:kevast/kevast-memory.js.git",
+  "author": "Andie <zchangan@163.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "kevast": "^0.0.2"
+  }
+}
