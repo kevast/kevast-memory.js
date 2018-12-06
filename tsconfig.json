@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": ".",
+    "outDir": "./dist/nodejs",
     "noImplicitAny": true,
     "module": "commonjs",
     "declaration": true,
