@@ -1805,10 +1805,10 @@ json5@^0.5.0:
   resolved "http://registry.npmjs.org/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   integrity sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
 
-kevast@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/kevast/-/kevast-0.0.4.tgz#04cc43c6767a6899a7cc8e9de8c799e66854913c"
-  integrity sha512-b7la3V7gpsWZ+6aM1MAHATZeL3VE+fSszbor5PtsYiZX7sLgCD+XcHQVOjg1e4mCNGpHHSaR36MfhQPD2GBx9Q==
+kevast@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/kevast/-/kevast-0.0.5.tgz#5732e2d1fde3c810291ad28a14f737f8417e4620"
+  integrity sha512-70Rz8tuNyczdMcteFygXFkPIg/sYDsxhSSmkwjr1C5/iZjw8gwmWDgO0EQTbYnfUs+yA/ECtr0s2xujEen53ig==
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
