@@ -2,7 +2,7 @@ import assert = require('assert');
 import Kevast = require('kevast');
 import KevastMemory = require('../index');
 
-describe('Test basic sync function', () => {
+describe('Test basic function', () => {
   const kevast = new Kevast.KevastSync(new KevastMemory());
   it('Get', () => {
     assert(kevast.get('key1') === null);
