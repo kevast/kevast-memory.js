@@ -1,5 +1,5 @@
-import {Pair} from 'kevast/dist/nodejs/Pair';
-import {ISyncStorage} from 'kevast/dist/nodejs/Storage';
+import { Pair } from 'kevast/dist/nodejs/Pair';
+import { ISyncStorage } from 'kevast/dist/nodejs/Storage';
 
 export = class KevastMemory implements ISyncStorage {
   private map: Map<string, string>;
