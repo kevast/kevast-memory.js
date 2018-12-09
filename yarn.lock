@@ -2569,10 +2569,10 @@ json5@^2.1.0:
   dependencies:
     minimist "^1.2.0"
 
-kevast@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/kevast/-/kevast-0.0.6.tgz#eb8c02353756ce0b5d958d4fa1981356d35af59b"
-  integrity sha512-7KfQGEXA6W9urh0U1PhCmS9LYO8uOA+askxa1VTM/XylyOlrOVEpcJimgCRTRXDx6vSqBbb7tG9VuYehstWqBw==
+kevast@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/kevast/-/kevast-0.0.7.tgz#1eec9dad9d1209575cd735436fd4f22c23c00ae4"
+  integrity sha512-hZnL9hfb7/FjVLZPYugZ3GFfAefIuMyPbd/sO7pvbKdZnNZXmjGwE5rrfSvKZHGNoJA7/qL9F3x2obqKsqvdjw==
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"

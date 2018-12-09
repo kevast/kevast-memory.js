@@ -1,6 +1,6 @@
 {
   "name": "kevast-memory",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Memory storage for kevast.js",
   "main": "dist/nodejs/index.js",
   "keywords": [
@@ -37,7 +37,7 @@
     "@types/node": "^10.12.12",
     "babel-loader": "^8.0.4",
     "espower-typescript": "^9.0.1",
-    "kevast": "^0.0.6",
+    "kevast": "^0.0.7",
     "mocha": "^5.2.0",
     "power-assert": "^1.6.1",
     "ts-loader": "^5.3.1",
