@@ -1,14 +1,15 @@
 {
   "name": "kevast-memory",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Memory storage for kevast.js",
   "main": "dist/nodejs/index.js",
   "keywords": [
+    "kevast",
     "key",
     "value",
     "key-value",
     "storage",
-    "kevast",
+    "redundancy",
     "memory"
   ],
   "scripts": {
