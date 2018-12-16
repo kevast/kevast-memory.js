@@ -3,8 +3,12 @@ import { Kevast } from 'kevast';
 import { KevastMemory } from '../index';
 
 describe('Test basic function', () => {
-  const map = new Map();
-  const kevast = new Kevast(new KevastMemory(map));
+  let kevast: Kevast;
+  let map: Map<string, string>;
+  before(async () => {
+    map = new Map();
+    kevast = await Kevast.create(new KevastMemory(map));
+  });
   it('Set', async () => {
     await kevast.set('key1', 'value1');
     await kevast.set('key2', 'value2');

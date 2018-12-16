@@ -17,4 +17,7 @@ export class KevastMemory implements IStorage {
       this.storage.delete(pair[0]);
     }
   }
+  public init(): Map<string, string> {
+    return this.storage;
+  }
 }
