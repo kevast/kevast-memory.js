@@ -1,36 +1,20 @@
-import { Pair } from 'kevast/dist/nodejs/Pair';
-import { ISyncStorage } from 'kevast/dist/nodejs/Storage';
+import { Pair } from 'kevast/dist/Pair';
+import { IMutationEvent, IStorage } from 'kevast/dist/Storage';
 
-export = class KevastMemory implements ISyncStorage {
-  private map: Map<string, string>;
-  public constructor() {
-    this.map = new Map();
+export class KevastMemory implements IStorage {
+  private storage: Map<string, string>;
+  public constructor(storage: Map<string, string> = new Map()) {
+    this.storage = storage;
   }
-  public clear() {
-    this.map.clear();
+  public mutate(event: IMutationEvent) {
+    for (const pair of event.added) {
+      this.storage.set(pair[0], pair[1]);
+    }
+    for (const pair of event.changed) {
+      this.storage.set(pair[0], pair[1]);
+    }
+    for (const pair of event.removed) {
+      this.storage.delete(pair[0]);
+    }
   }
-  public has(key: string): boolean {
-    return this.map.has(key);
-  }
-  public delete(key: string) {
-    this.map.delete(key);
-  }
-  public entries(): IterableIterator<Pair> {
-    return this.map.entries();
-  }
-  public get(key: string): string {
-    return this.map.get(key);
-  }
-  public keys(): IterableIterator<string> {
-    return this.map.keys();
-  }
-  public set(key: string, value: string) {
-    this.map.set(key, value);
-  }
-  public size(): number {
-    return this.map.size;
-  }
-  public values(): IterableIterator<string> {
-    return this.map.values();
-  }
-};
+}
