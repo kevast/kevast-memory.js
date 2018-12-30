@@ -3,7 +3,7 @@ const path = require('path');
 function generateConfig(name) {
   const mode = name.includes('min') ? 'production' : 'development';
   return {
-    entry: './index.ts',
+    entry: ['@babel/polyfill', './index.ts'],
     mode,
     module: {
       rules: [

@@ -1,9 +1,11 @@
-import { Pair } from 'kevast/dist/Pair';
 import { IMutationEvent, IStorage } from 'kevast/dist/Storage';
 
 export class KevastMemory implements IStorage {
   private storage: Map<string, string>;
   public constructor(storage: Map<string, string> = new Map()) {
+    if (!(storage instanceof Map)) {
+      throw new TypeError('Storage must be a map');
+    }
     this.storage = storage;
   }
   public mutate(event: IMutationEvent) {
@@ -17,7 +19,7 @@ export class KevastMemory implements IStorage {
       this.storage.delete(pair[0]);
     }
   }
-  public init(): Map<string, string> {
+  public current(): Map<string, string> {
     return this.storage;
   }
 }
