@@ -23,7 +23,7 @@ npm install kevast-memory
 ## Usage
 ```javascript
 const { Kevast } = require('kevast');
-const { KevastMemory } = require('./dist/index');
+const { KevastMemory } = require('kevast-memory');
 const assert = require('assert');
 
 (async () => {
@@ -36,7 +36,7 @@ const assert = require('assert');
 Specify Map:
 ```javascript
 const { Kevast } = require('kevast');
-const { KevastMemory } = require('./dist/index');
+const { KevastMemory } = require('kevast-memory');
 const assert = require('assert');
 
 (async () => {
