@@ -1,6 +1,6 @@
 {
   "name": "kevast-memory",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Memory storage for kevast.js",
   "main": "dist/index.js",
   "keywords": [
@@ -18,7 +18,9 @@
     "build:browser": "webpack",
     "build:nodejs": "tsc",
     "clean": "rm -rf ./dist/*",
-    "prepublishOnly": "yarn test && yarn build"
+    "prepublishOnly": "yarn test && yarn build",
+    "coverage": "istanbul cover -e .ts _mocha -- --require ts-node/register \"test/**/*.ts\"",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "files": [
     "dist/**/*"
@@ -38,9 +40,11 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",
     "espower-typescript": "^9.0.1",
+    "istanbul": "1.1.0-alpha.1",
     "kevast": "^0.2.2",
     "mocha": "^5.2.0",
     "power-assert": "^1.6.1",
+    "ts-node": "^7.0.1",
     "tslint": "^5.12.1",
     "typescript": "^3.2.2",
     "webpack": "^4.28.4",

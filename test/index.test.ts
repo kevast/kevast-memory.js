@@ -9,6 +9,21 @@ describe('Test basic function', () => {
     map = new Map();
     kevast = new Kevast(new KevastMemory(map));
   });
+  it('Construction', async () => {
+    let kevastMemory: KevastMemory;
+    kevastMemory = new KevastMemory();
+    const tmp = new Kevast(kevastMemory);
+    await tmp.set('key', 'value');
+    assert(await tmp.get('key') === 'value');
+    assert.throws(() => {
+      const _ = new KevastMemory('string' as any as Map<string, string>);
+    });
+  });
+  it('Get', async () => {
+    map.set('key', 'value');
+    assert(await kevast.get('key') === 'value');
+    kevast.remove('key');
+  });
   it('Set', async () => {
     await kevast.set('key1', 'value1');
     await kevast.set('key2', 'value2');
