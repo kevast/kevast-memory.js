@@ -1,6 +1,6 @@
-import { IMutationEvent, IStorage } from 'kevast/dist/Storage';
+import { MutationEvent, Storage } from 'kevast/dist/Storage';
 
-export class KevastMemory implements IStorage {
+export class KevastMemory implements Storage {
   private storage: Map<string, string>;
   public constructor(storage: Map<string, string> = new Map()) {
     if (!(storage instanceof Map)) {
@@ -8,18 +8,18 @@ export class KevastMemory implements IStorage {
     }
     this.storage = storage;
   }
-  public mutate(event: IMutationEvent) {
-    for (const pair of event.added) {
-      this.storage.set(pair[0], pair[1]);
+  public mutate(event: MutationEvent): Promise<void> | void {
+    for (const pair of event.set) {
+      this.storage.set(pair.key, pair.value as string);
     }
-    for (const pair of event.changed) {
-      this.storage.set(pair[0], pair[1]);
+    for (const key of event.removed) {
+      this.storage.delete(key);
     }
-    for (const pair of event.removed) {
-      this.storage.delete(pair[0]);
+    if (event.clear) {
+      this.storage.clear();
     }
   }
-  public current(): Map<string, string> {
-    return this.storage;
+  public get(key: string): Promise<string | undefined> | (string | undefined) {
+    return this.storage.get(key);
   }
 }
