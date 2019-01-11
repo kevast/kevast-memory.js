@@ -39,6 +39,7 @@
     "@types/node": "^10.12.18",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",
+    "coveralls": "^3.0.2",
     "espower-typescript": "^9.0.1",
     "istanbul": "1.1.0-alpha.1",
     "kevast": "^0.2.2",
