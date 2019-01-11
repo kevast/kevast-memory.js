@@ -3122,10 +3122,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-kevast@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/kevast/-/kevast-0.2.2.tgz#0c8dde838486fdd5f7ee648ab578b61baa9c644a"
-  integrity sha512-g1nhEGgBIBNl4mGRe7CaO/zzxawt2kKfIgarErOAZwvaM+6JUpUPmqMg25yCcp3etyrYbPxQSDk63zm8fTN1nA==
+kevast@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.npmjs.org/kevast/-/kevast-0.2.3.tgz#3b9a464be0b5d5d07d76bc208b9b092f4110297b"
+  integrity sha512-HYtlAXZWInlcJscsZginQ3Bvp2ucGG/N/PzHFRi2dVwDpugYd3kvrCkUIVCV15LO7AT4sv6R3f7yrWGZzks/YQ==
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
