@@ -23,7 +23,7 @@ npm install kevast-memory
 
 ### Browser
 ```html
-<script src="https://cdn.jsdelivr.net/npm/kevast-memory/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kevast-memory/dist/kevast-memory.min.js"></script>
 ```
 
 ## Usage
